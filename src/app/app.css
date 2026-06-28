@@ -1,0 +1,431 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.card {
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    width: 100%;
+    background: linear-gradient(90deg, #1f024a 0%, #291a3e 55%, #4b1d8f 100%);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-top: 0;
+}
+
+.register-btn {
+    background-color: #ffffff;
+    color: #4b1d8f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.register-btn i,
+.appointment-btn i,
+.arrow i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Font Awesome 6 Free", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.register-btn i {
+    color: #4b1d8f;
+}
+
+.main-section {
+    background: linear-gradient(90deg, #05012c 0%, #331956 55%, #602cad 100%);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-image {
+    flex: 1;
+    min-width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.main-image-marquee {
+    width: 100%;
+    max-width: 680px;
+    display: grid;
+    gap: 0;
+    height: 488px; /* 3 rows × 160px + 2×4px gap */
+    animation: scrollRows 18s linear infinite;
+}
+
+.main-image-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+}
+
+.kid_img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    animation: _ngcontent-ng-c3924031516_floatUp 4.5s ease-in-out infinite alternate;
+}
+
+.main-image-grid .kid_img:nth-child(2n) {
+    animation-duration: 4.5s;
+}
+
+.main-image-grid .kid_img:nth-child(3n) {
+    animation-duration: 5.5s;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-16px);
+    }
+}
+
+@keyframes scrollRows {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+.main-image-marquee:hover,
+.main-image-marquee:focus-within {
+    animation-play-state: paused;
+}
+
+.main-details {
+    padding: 140px 0px 20px 100px;
+    color: #f3d27e;
+    line-height: 1.4;
+}
+
+.main-details-text-heading {
+    font-size: 35px;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.main-details-text-subheading {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.main-details-text-description {
+    font-size: 24px;
+    font-weight: 200;
+    font-family: sans-serif;
+}
+
+.address_timing_section {
+    height: 100px;
+    width: 350px;
+    background: #f3d27e;
+    border-radius: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.address {
+    border-right: 1px solid #00000045;
+    padding: 2px 4px 0px 2px;
+
+}
+
+.text {
+    color: #4b1d8f;
+    font-weight: 600;
+    text-align: center;
+}
+.timing{
+    padding: 2px 0px 2px 10px;
+}
+
+.value {
+    color: black;
+}
+
+.achievement_img {
+    height: 220px;
+    width: 100%;
+}
+
+.participate_text {
+    font-size: 30px;
+    color: #1f024a;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+
+.participate_details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.participate_img {
+    width: 200px;
+    height: 100px;
+}
+
+
+.school-section {
+    padding: 60px;
+}
+
+.school_text {
+    padding-bottom: 40px;
+    color: #1f024a;
+    font-size: 33px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.school_details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.school_img {
+    width: 310px;
+    height: 290px;
+}
+
+.appointment-btn i {
+    color: #ffffff;
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 25px !important;
+}
+
+.arrow-right {
+    background: #ffffff;
+    color: black;
+}
+
+.appointment-section {
+    background-color: #e2c2f5;
+    display: flex;
+}
+
+.appointment-btn {
+    height: 40px;
+    width: 180px;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-text {
+    padding: 8px;
+    background-color: #e2c2f5;
+}
+
+.icon_box {
+    padding: 10px;
+    border-right: 2px solid black;
+    background: linear-gradient(360deg, #360e70, #4b1d8f);
+}
+
+.preschedule_img {
+    width: 100%;
+    display: block;
+    /* Fade the edges */
+    -webkit-mask-image: radial-gradient(circle, black 65%, transparent 100%);
+    mask-image: radial-gradient(circle, black 65%, transparent 100%);
+}
+
+.mustVisit-section {
+    background: linear-gradient(360deg, #1f024a 0%, #291a3e 55%, #4b1d8f 100%);
+}
+
+.mustVisit_text {
+    font-size: 35px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+
+.mustVisit_details {
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.mustVisit_img {
+    width: 300px;
+    height: 280px;
+    padding: 10px;
+}
+
+.mustVisit_imgLast {
+    height: 280px;
+    padding: 10px 0px 10px 10px;
+}
+
+.arrow-section {
+    height: 200px;
+    border-top: 0.1px solid #f7f7f7;
+}
+
+.arrow-icon {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    gap: 30px;
+    background-color: #1f024a;
+    clip-path: ellipse(52% 100% at 50% 0%);
+}
+
+.arrow {
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 100%;
+    width: 50px;
+    margin-top: 20px;
+}
+
+.offer_section {
+    padding: 80px;
+    width: 650px;
+    line-height: 1.5;
+}
+
+.exciting_news {
+    color: #83429a;
+    font-style: italic;
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.preschedule_details {
+    color: #360e70;
+    font-size: 42px;
+    font-family: monospace;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 40px;
+    width: 100%;
+    background: linear-gradient(360deg, #1f024a 0%, #291a3e 55%, #4b1d8f 100%);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    color: #ffffff;
+    padding: 10px;
+}
+
+.logo {
+    border-radius: 5%;
+}
+
+.location-logo {
+    border-radius: 20%;
+    height: 30px;
+    width: 30px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px;
+}
+
+.contact-address {
+    font-size: 14px;
+    text-align: left;
+}
+
+.contact-address span {
+    display: block;
+}
+
+.contact-label {
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+    width: 100%;
+    font-size: 14px;
+    background: #f7f7f7;
+}
